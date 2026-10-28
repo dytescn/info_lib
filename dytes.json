@@ -1,0 +1,14 @@
+{
+  "name": "info_lib",
+  "version": "0.1.0",
+  "description": "system basic information repository",
+  "keywords": ["info", "router", "setting", "database", "sys"],
+  "author": "funxdata",
+  "type": "sys",
+  "license": "MIT",
+  "platform-exports": {
+    "windows": {
+      "./target/release/info_lib.dll": "info_lib.dll"
+    }
+  }
+}

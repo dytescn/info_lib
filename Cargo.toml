@@ -1,0 +1,16 @@
+[package]
+name = "info_lib"
+version = "0.1.0"
+edition = "2021"
+description = "System basic information repository: router / setting CRUD and designdb notes."
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "info_lib"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+libloading = "0.8"
+time = { version = "0.3", features = ["formatting"] }
