@@ -1,6 +1,6 @@
 [package]
 name = "info_lib"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "System basic information repository: router / setting CRUD and designdb notes."
 license = "MIT"

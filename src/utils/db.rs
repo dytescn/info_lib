@@ -158,7 +158,8 @@ pub fn designdb_update(collection: &str, filter: Value, update: Value) -> AppRes
             "path": "setting",
             "collection": collection,
             "filter": filter,
-            "update": update,
+            // PoloDB 的 update 需要操作符，这里统一按字段更新处理
+            "update": { "$set": update },
         }),
         500101,
     )?;

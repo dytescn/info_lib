@@ -3,6 +3,9 @@
 System Basic Information Repository：`database/info.db` 的 `router` / `setting`
 读写，以及 `designdb/setting.setting_note` 分类对象。
 
+`dytes.json` 的 `dependencies-sys` 声明 `database`、`designdb`；两者都以
+`./libary/*.dll` 形式在运行时加载。
+
 ## 接口
 
 | FFI-Symbol | 作用 |

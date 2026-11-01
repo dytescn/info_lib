@@ -1,11 +1,16 @@
 {
   "name": "info_lib",
-  "version": "0.1.0",
+  "uuid": "6be1125d-28d9-464f-89c1-ffa51db61ce7",
+  "version": "0.1.1",
   "description": "system basic information repository",
   "keywords": ["info", "router", "setting", "database", "sys"],
   "author": "funxdata",
   "type": "sys",
   "license": "MIT",
+  "dependencies-sys": {
+    "database": "1.0.2",
+    "designdb": "1.0.0"
+  },
   "platform-exports": {
     "windows": {
       "./target/release/info_lib.dll": "info_lib.dll"
