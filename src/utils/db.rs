@@ -5,8 +5,18 @@ use std::ffi::{c_char, c_int, CStr, CString};
 use std::sync::OnceLock;
 
 const OUT_BUF_SIZE: usize = 65536;
+#[cfg(windows)]
 const DATABASE_LIB: &str = "./libary/database.dll";
+#[cfg(target_os = "linux")]
+const DATABASE_LIB: &str = "./libary/database.so";
+#[cfg(target_os = "macos")]
+const DATABASE_LIB: &str = "./libary/database.dylib";
+#[cfg(windows)]
 const DESIGNDB_LIB: &str = "./libary/libdesigndb.dll";
+#[cfg(target_os = "linux")]
+const DESIGNDB_LIB: &str = "./libary/libdesigndb.so";
+#[cfg(target_os = "macos")]
+const DESIGNDB_LIB: &str = "./libary/libdesigndb.dylib";
 
 type FfiFn = unsafe extern "C" fn(*const c_char, *mut c_char) -> c_int;
 
